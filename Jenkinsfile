@@ -8,6 +8,7 @@ pipeline {
         fileExists 'succ.txt'
         readFile 'succ.txt'
         findText(fileSet: 'succ.txt', regexp: 'Q-SYS Designer Installer(.*)exe', succeedIfFound: true)
+        sh 'env.Designerfilename=findText(fileSet: \'succ.txt\', regexp: \'Q-SYS Designer Installer(.*)exe\', succeedIfFound: true)'
       }
     }
 
