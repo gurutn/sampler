@@ -8,7 +8,7 @@ pipeline {
         fileExists 'succ.txt'
         readFile 'succ.txt'
         findText(fileSet: 'succ.txt', regexp: 'Q-SYS Designer Installer(.*)exe', succeedIfFound: true, buildResult: 'Designerfilename')
-        sh 'def result=findText(fileSet: \'succ.txt\', regexp: \'Q-SYS Designer Installer(.*)exe\', succeedIfFound: true)'
+        sh 'findText(fileSet: \'succ.txt\', regexp: \'Q-SYS Designer Installer(.*)exe\', succeedIfFound: true)'
         echo 'result'
       }
     }
