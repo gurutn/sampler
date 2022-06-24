@@ -9,7 +9,7 @@ pipeline {
          sh '''cat 'C:/ProgramData/Jenkins/.jenkins/workspace/sampler_main/succ.txt' | grep "Designer\/Release\/Web\/"'''
         echo 'result'sampler_main
       }
-    }/
+    }
 
   }
   environment {
